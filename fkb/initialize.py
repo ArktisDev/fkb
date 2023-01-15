@@ -41,6 +41,17 @@ def Initialize(config : Dict[str, str]) -> Database:
     # Now that files exist, create DB object and return it
     return Database(config)
 
+def InitializeDB(config : Dict[str, str]) -> Database:
+    '''
+    Initialize just the fkb database
+    Arguments:
+    config          - a configuration dictionary as specified
+                      in fkb/config.py
+    Returns:
+    A Database object connected to the fkb database
+    '''
+    return Database(config)
+
 def CreateFKBFiles(config : Dict[str, str]):
     '''
     Create all the directories and files for fkb.

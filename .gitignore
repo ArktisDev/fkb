@@ -1,6 +1,5 @@
 # Python files
-**/__pycache__
+**/__pycache__/**
 
 # Build files
-
-dist/**
+**/dist/**
