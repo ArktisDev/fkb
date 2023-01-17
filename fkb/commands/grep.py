@@ -75,6 +75,10 @@ def Grep(args: Dict[str, str], config: Dict[str, str]):
     matches = []
     for rowID, obj in enumerate(rows):
         filePath = str(Path(config['PATH_FKB_DATA'], obj.path)) + fileExt
+        
+        if not os.path.exists(filePath):
+            continue
+        
         try:
             with open(filePath) as handle:
                 for i, line in enumerate(handle):

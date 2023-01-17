@@ -336,11 +336,6 @@ def ParseArgs(args: Sequence[str]) -> argparse.Namespace:
         default=False,
     )
 
-    importParser = subParsers.add_parser(
-        'import', help='Import a backup of the current knowledge base')
-    exportParser = subParsers.add_parser(
-        'export', help='Export a backup of the current knowledge base')
-
     backupSubParser = backupParser.add_subparsers(help='sub-command help', dest='subcommand')
     backupSubParser.required = True
     backupImportParser = backupSubParser.add_parser('import', help='Import a backup of the current knowledge base')
